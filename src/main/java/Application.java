@@ -26,6 +26,7 @@ public class Application {
         environment.routingEngine()
                 .registerAutoRoute(Route.sync("GET", "/zip/<country>/<code>", Application::zipInfo))
                 .registerAutoRoute(Route.sync("GET", "/ping", rc -> "pong"))
+                .registerAutoRoute(Route.sync("GET", "/hello", rc -> "world"))
                 .registerAutoRoute(Route.sync("GET", "/pong", rc -> "ping"));
     }
 
